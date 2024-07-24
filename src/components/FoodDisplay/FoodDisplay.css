@@ -1,0 +1,74 @@
+.food-display {
+    margin-top: 30px;
+   
+}
+
+.food-display h2 {
+    font-size: max(2vw, 24px);
+    font-weight:200;
+   margin-top: -10px;
+   margin-bottom: 10px;
+}
+
+.food-display-list {
+    color:rgb(11, 51, 132);
+   
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin-top: 20px;
+    gap:10px;
+   
+}
+.food-display-list name{
+    font-size: 20px;
+   
+}
+
+
+@media (max-width: 600px) {
+    .food-display h2 {
+        font-size: max(4vw, 20px);
+    }
+
+    .food-display-list {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+     
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .food-display h2 {
+        font-size: max(3vw, 22px);
+    }
+
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        row-gap: 40px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .food-display h2 {
+        font-size: max(2.5vw, 24px);
+    }
+
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        row-gap: 45px;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .food-display h2 {
+        font-size: max(2vw, 24px);
+    }
+
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        row-gap: 50px;
+    }
+}

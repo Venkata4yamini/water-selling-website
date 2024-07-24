@@ -1,0 +1,233 @@
+/* Base styles */
+.navbar {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    width: 120px;
+    height: auto;
+    /* Ensure it scales properly */
+}
+
+.navbar .logo:hover {
+    cursor: pointer;
+    width: 140px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 26px;
+    color: #000000;
+    font-size: 18px;
+    margin-left: 0px;
+}
+
+.navbar-menu li:hover {
+    cursor: pointer;
+    color: blue;
+    filter: saturate(190%);
+    filter: brightness(150%);
+}
+
+.navbar-right-search:hover {
+    cursor: pointer;
+    color: blue;
+    filter: saturate(190%);
+    filter: brightness(150%);
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    color: #000000;
+    gap: 26px;
+    font-size: 18px;
+}
+
+.basket {
+    color: #000000;
+}
+
+.basket:hover {
+    cursor: pointer;
+    color: blue;
+    filter: saturate(190%);
+    filter: brightness(150%);
+}
+
+.signin {
+    border: 1px solid;
+    color: blue;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+.signin:hover {
+    background-color: blue;
+    color: white;
+}
+
+.navbar .active {
+    padding-bottom: 1px;
+    border-bottom: 2px solid #49557e;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -22px;
+    margin-left: 10px;
+    transform: translate(50%, -50%);
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 1200px) {
+    .navbar-menu {
+        margin-left:0;
+        /* Adjust as needed for better centering */
+    }
+}
+
+@media (max-width: 1050px) {
+    .navbar .logo {
+        width: 100px;
+    }
+
+    .navbar-menu {
+        gap: 20px;
+        font-size: 17px;
+        margin-left: 0;
+        /* Center menu */
+    }
+
+    .navbar-right {
+        gap: 20px;
+    }
+
+    .navbar-right img {
+        width: 22px;
+    }
+
+    .navbar-right button {
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 90px;
+    }
+
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+        margin-left: 0;
+        /* Center menu */
+    }
+
+    .navbar-right {
+        gap: 15px;
+    }
+
+    .navbar-right img {
+        width: 20px;
+    }
+
+    .navbar-right button {
+        padding: 7px 15px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar .logo {
+        width: 80px;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-right {
+        gap: 14px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile specific styles */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 10px 0;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .navbar .logo {
+        width: 70px;
+    }
+
+    .navbar-right {
+        flex-direction:row;
+        align-items: flex-start;
+        gap: 9px;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+
+    .signin {
+        padding: 2px 8px;
+        font-size: 14px;
+    }
+
+    .basket {
+        font-size: 14px;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        background-color: white;
+        /* Background color for the dropdown menu */
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        /* Adjust based on your navbar height */
+        left: 0;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 5px 0;
+    }
+}
+
+@media (hover: hover) and (max-width: 600px) {
+    .navbar-menu li:hover {
+        cursor: pointer;
+        color: blue;
+        filter: saturate(190%);
+        filter: brightness(150%);
+    }
+}
